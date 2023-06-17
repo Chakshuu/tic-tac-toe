@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+}
+
+nav {
+  background-color: cornflowerblue;
+  color: white;
+  padding: 0.5rem;
+  height: 1.5rem;
+  position: fixed;
+  width: 100%;
+  z-index: 3;
+}
+
+ul {
+  display: inline-flex;
+}
+
+li {
+  list-style-type: none;
+}
+
+li:not(:first-child) {
+  margin-left: 1rem;
+}
+
+.c-container-wrap {
+  background-color: azure;
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+  padding-top: 2.5rem;
+}
+
+/* Left container*/
+.c-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.c-title {
+  padding-top: 1.5rem;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 2rem;
+}
+
+.c-wrap-game {
+  display: grid;
+  grid-template-columns: repeat(3, 5rem);
+  grid-template-rows: repeat(3, 5rem);
+  margin-top: 2rem;
+}
+
+.c-wrap-game__box {
+  align-items: center;
+  border: 0.1rem solid black;
+  display: flex;
+  justify-content: center;
+}
+
+.c-hover:hover {
+  background-color: aqua;
+  cursor: pointer;
+}
+
+.c-wrap-game__box--text {
+  font-size: 2.5rem;
+}
+
+.c-text-area {
+  align-items: center;
+  bottom: 5rem;
+  display: flex;
+  flex-direction: column;
+  height: 0;
+  justify-content: center;
+  margin-top: 2rem;
+  padding: 0.5rem;
+  position: fixed;
+}
+
+.c-text {
+  font-size: 2rem;
+}
+
+.c-sub-text {
+  margin-top: 0.5rem;
+}
+
+.c-game-info__style {
+  height: 20%;
+  width: 60%;
+  display: flex;
+  margin-top: 1rem;
+}
+
+.c-game-info__style--none {
+  display: none;
+}
+
+.c-game-info__text {
+  align-items: center;
+  display: flex;
+  font-family: 'Shadows Into Light', cursive;
+  font-size: 3rem;
+  height: 100%;
+  justify-content: center;
+  width: 50%;
+}
+
+.c-game-info__img {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: flex-end;
+  width: 50%;
+}
+
+.c-game-info__img img {
+  height: 100%;
+  width: 50%;
+}
+
+.c-button__style {
+  align-items: center;
+  background-color: rgb(238, 132, 132);
+  border-radius: 1rem;
+  cursor: pointer;
+  display: flex;
+  font-size: 2rem;
+  height: 3rem;
+  justify-content: center;
+  margin-top: 1rem;
+  padding: 0.5rem;
+  width: 50%;
+}
+
+/* Media query for reposnsive design */
+@media only screen and (max-width: 600px) {
+  .c-title {
+    font-size: 1.5rem;
+  }
+
+  .c-game-info__style {
+    width: 80%;
+  }
+
+  .c-game-info__img img {
+    width: 70%;
+  }
+}
+
+/* Utilities classes */
+.bl {
+  border-left: 0;
+}
+
+.br {
+  border-right: 0;
+}
+
+.bt {
+  border-top: 0;
+}
+
+.bb {
+  border-bottom: 0;
+}
